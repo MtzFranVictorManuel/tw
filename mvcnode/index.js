@@ -7,10 +7,10 @@ dotenv.config();
 app.set('view engine', 'ejs');
 
 const homeRouter = require('./routes/home');
-app.use('/', homeRouter);
+app.use("/", homeRouter);
 app.use('/home', homeRouter);
 
-const errorhandler = require('./middleware/errorhandler');
+const errorhandler = require('./middlewares/errorhandler');
 app.use(errorhandler);
 
 app.listen(process.env.SERVER_PORT, () => {

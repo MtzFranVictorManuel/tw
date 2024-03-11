@@ -1,9 +1,9 @@
-const alumno = require('../models/alumno');
+const alumno = require("../models/alumno");
 
 const index = async function (req, res, next) {
     try {
-        const alumnos = await alumno.list();
-        res.render('home', {model: items});
+        let items = await alumno.list();
+        res.render("home", {model: items});
     } catch (error) {
         next(error);
     }
